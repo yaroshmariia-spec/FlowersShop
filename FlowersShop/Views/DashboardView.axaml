@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:FlowersShop.ViewModels"
+             x:DataType="vm:DashboardViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="FlowersShop.Views.DashboardView">
+    
+    <Grid RowDefinitions="Auto, *" Margin="20">
+        
+        <Border Grid.Row="0" Background="#FFB6C1" CornerRadius="15" Padding="30" Margin="0,0,0,20">
+            <StackPanel>
+                <TextBlock Text="{Binding WelcomeMessage}" FontSize="28" FontWeight="Bold" Foreground="White" Margin="0,0,0,5"/>
+                <TextBlock Text="{Binding CurrentDate}" FontSize="16" Foreground="#FFF0F5"/>
+            </StackPanel>
+        </Border>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="20">
+            
+            <Border Background="White" CornerRadius="10" Padding="20" Width="250" 
+                    BoxShadow="0 4 10 0 #20000000"> <StackPanel>
+                    <TextBlock Text="Всього товарів у каталозі" FontSize="14" Foreground="Gray" Margin="0,0,0,10"/>
+                    <TextBlock Text="{Binding TotalFlowers}" FontSize="42" FontWeight="Black" Foreground="#FF69B4"/>
+                </StackPanel>
+            </Border>
+            
+            <Border Background="White" CornerRadius="10" Padding="20" Width="250" 
+                    BoxShadow="0 4 10 0 #20000000">
+                <StackPanel>
+                    <TextBlock Text="Нові замовлення" FontSize="14" Foreground="Gray" Margin="0,0,0,10"/>
+                    <TextBlock Text="{Binding ActiveOrders}" FontSize="42" FontWeight="Black" Foreground="#87CEFA"/>
+                </StackPanel>
+            </Border>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

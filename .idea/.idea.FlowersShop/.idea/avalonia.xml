@@ -3,7 +3,9 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="FlowersShop/App.axaml" value="FlowersShop/FlowersShop.csproj" />
         <entry key="FlowersShop/Views/MainWindow.axaml" value="FlowersShop/FlowersShop.csproj" />
+        <entry key="FlowersShop/Views/Pages/DashboardView.axaml" value="FlowersShop/FlowersShop.csproj" />
       </map>
     </option>
   </component>

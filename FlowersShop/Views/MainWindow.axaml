@@ -3,18 +3,32 @@
         xmlns:vm="using:FlowersShop.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:FlowerShop.ViewModels"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="FlowersShop.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
+        x:DataType="viewModels:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="FlowersShop">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+    <Grid ColumnDefinitions="200, *">
+        
+        <Border Grid.Column="0" Background="#FFF0F5" BorderBrush="#FFB6C1" BorderThickness="0,0,1,0">
+            <StackPanel Spacing="15" Margin="15, 30">
+                <TextBlock Text="Квітковий Магазин" FontWeight="Bold" FontSize="18" Foreground="Gray" Margin="5,0,0,20"/>
+                
+                <Button Content="Головна" Command="{Binding NavigateTo}" CommandParameter="Dashboard" 
+                        HorizontalAlignment="Stretch" Background="Transparent" Foreground="#333333" FontSize="16"/>
+                
+                <Button Content="Каталог товарів" Command="{Binding NavigateTo}" CommandParameter="Catalog" 
+                        HorizontalAlignment="Stretch" Background="Transparent" Foreground="#333333" FontSize="16"/>
+                
+                <Button Content="Налаштування" Command="{Binding NavigateTo}" CommandParameter="Settings" 
+                        HorizontalAlignment="Stretch" Background="Transparent" Foreground="#333333" FontSize="16"/>
+            </StackPanel>
+        </Border>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TransitioningContentControl Grid.Column="1" Content="{Binding CurrentView}" />
+        
+    </Grid>
 
 </Window>

@@ -4,6 +4,7 @@ using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
+using FlowerShop.ViewModels;
 using FlowersShop.ViewModels;
 using FlowersShop.Views;
 
