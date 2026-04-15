@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using FlowersShop.ViewModels;
 
-namespace FlowerShop.ViewModels 
+namespace FlowersShop.ViewModels 
 {
     public class MainWindowViewModel : ViewModelBase 
     {
@@ -24,6 +24,9 @@ namespace FlowerShop.ViewModels
             {
                 case "Dashboard":
                     CurrentView = new DashboardViewModel();
+                    break;
+                case "Catalog":
+                    CurrentView = new CatalogViewModel();
                     break;
             }
         }
