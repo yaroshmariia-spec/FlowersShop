@@ -59,10 +59,16 @@
                 <TextBox Text="{Binding EditingFlower.Category}" Watermark="Наприклад: Вазони" Padding="10" CornerRadius="5"/>
 
                 <TextBlock Text="Ціна (грн):" FontWeight="SemiBold" Foreground="Gray"/>
-                <TextBox Text="{Binding EditingFlower.Price}" Watermark="0.00" Padding="10" CornerRadius="5"/>
+                <NumericUpDown Value="{Binding EditingFlower.Price}" 
+                               Minimum="0" 
+                               FormatString="0.00" 
+                               Padding="10" CornerRadius="5"/>
 
                 <TextBlock Text="Залишок на складі:" FontWeight="SemiBold" Foreground="Gray"/>
-                <TextBox Text="{Binding EditingFlower.StockQuantity}" Watermark="Штуки..." Padding="10" CornerRadius="5"/>
+                <NumericUpDown Value="{Binding EditingFlower.StockQuantity}" 
+                               Minimum="0" 
+                               Increment="1" 
+                               Padding="10" CornerRadius="5"/>
 
                 <Grid ColumnDefinitions="*, *" Margin="0,20,0,0">
                     <Button Grid.Column="0" Content="Зберегти" Command="{Binding SaveFlowerCommand}" 
