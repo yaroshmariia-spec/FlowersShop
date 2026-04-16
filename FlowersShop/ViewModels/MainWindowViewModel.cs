@@ -28,6 +28,9 @@ namespace FlowersShop.ViewModels
                 case "Catalog":
                     CurrentView = new CatalogViewModel();
                     break;
+                case "Settings":
+                    CurrentView = new SettingsViewModel();
+                    break;
             }
         }
     }

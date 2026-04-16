@@ -11,18 +11,19 @@
 
     <Grid ColumnDefinitions="200, *">
         
-        <Border Grid.Column="0" Background="#FFF0F5" BorderBrush="#FFB6C1" BorderThickness="0,0,1,0">
+        <Border Grid.Column="0" Background="{DynamicResource SystemListLowColor}" 
+                BorderBrush="{DynamicResource BrandLightPinkBrush}" BorderThickness="0,0,1,0">
             <StackPanel Spacing="15" Margin="15, 30">
-                <TextBlock Text="Квітковий Магазин" FontWeight="Bold" FontSize="18" Foreground="Gray" Margin="5,0,0,20"/>
+                <TextBlock Text="Квітковий Магазин" FontWeight="Bold" FontSize="18" Foreground="{DynamicResource BrandPinkBrush}" Margin="5,0,0,20"/>
                 
                 <Button Content="Головна" Command="{Binding NavigateTo}" CommandParameter="Dashboard" 
-                        HorizontalAlignment="Stretch" Background="Transparent" Foreground="#333333" FontSize="16"/>
+                        HorizontalAlignment="Stretch" Background="Transparent" Foreground="{DynamicResource SystemBaseHighColor}" FontSize="16"/>
                 
                 <Button Content="Каталог товарів" Command="{Binding NavigateTo}" CommandParameter="Catalog" 
-                        HorizontalAlignment="Stretch" Background="Transparent" Foreground="#333333" FontSize="16"/>
+                        HorizontalAlignment="Stretch" Background="Transparent" Foreground="{DynamicResource SystemBaseHighColor}" FontSize="16"/>
                 
                 <Button Content="Налаштування" Command="{Binding NavigateTo}" CommandParameter="Settings" 
-                        HorizontalAlignment="Stretch" Background="Transparent" Foreground="#333333" FontSize="16"/>
+                        HorizontalAlignment="Stretch" Background="Transparent" Foreground="{DynamicResource SystemBaseHighColor}" FontSize="16"/>
             </StackPanel>
         </Border>
 
