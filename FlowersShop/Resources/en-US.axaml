@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <system:String x:Key="SettingsTitle">Settings</system:String>
+    <system:String x:Key="ThemeLabel">App Appearance</system:String>
+    <system:String x:Key="DarkThemeLabel">Dark Theme</system:String>
+    <system:String x:Key="LocalizationLabel">Localization</system:String>
+    <system:String x:Key="LanguageLabel">Language</system:String>
+    <system:String x:Key="OnText">On</system:String>
+    <system:String x:Key="OffText">Off</system:String>
+</ResourceDictionary>

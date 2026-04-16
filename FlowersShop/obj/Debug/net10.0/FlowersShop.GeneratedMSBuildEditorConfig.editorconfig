@@ -26,6 +26,12 @@ build_property.EnableCodeStyleSeverity =
 [/Users/gordinskij/RiderProjects/FlowersShop/FlowersShop/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/Users/gordinskij/RiderProjects/FlowersShop/FlowersShop/Resources/en-US.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/gordinskij/RiderProjects/FlowersShop/FlowersShop/Resources/uk-UA.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/Users/gordinskij/RiderProjects/FlowersShop/FlowersShop/Views/CatalogView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

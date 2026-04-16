@@ -4,10 +4,13 @@
     <option name="projectPerEditor">
       <map>
         <entry key="FlowersShop/App.axaml" value="FlowersShop/FlowersShop.csproj" />
+        <entry key="FlowersShop/Resources/en-US.axaml.axaml" value="FlowersShop/FlowersShop.csproj" />
+        <entry key="FlowersShop/Resources/uk-UA.axaml.axaml" value="FlowersShop/FlowersShop.csproj" />
         <entry key="FlowersShop/Views/CatalogView.axaml" value="FlowersShop/FlowersShop.csproj" />
         <entry key="FlowersShop/Views/DashboardView.axaml" value="FlowersShop/FlowersShop.csproj" />
         <entry key="FlowersShop/Views/MainWindow.axaml" value="FlowersShop/FlowersShop.csproj" />
         <entry key="FlowersShop/Views/Pages/DashboardView.axaml" value="FlowersShop/FlowersShop.csproj" />
+        <entry key="FlowersShop/Views/SettingsView.axaml" value="FlowersShop/FlowersShop.csproj" />
       </map>
     </option>
   </component>

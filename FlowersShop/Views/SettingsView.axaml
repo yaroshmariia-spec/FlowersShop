@@ -7,5 +7,44 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="FlowersShop.Views.SettingsView">
     
-    
+    <Grid RowDefinitions="Auto, *" Margin="20">
+        
+        <TextBlock Grid.Row="0" Text="{DynamicResource SettingsTitle}" FontSize="28" FontWeight="Bold" 
+                   Foreground="{DynamicResource SystemBaseHighColor}" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Spacing="20" Width="400" HorizontalAlignment="Left">
+            
+            <Border Classes="Card">
+                <StackPanel>
+                    <TextBlock Text="{DynamicResource ThemeLabel}" FontWeight="SemiBold" 
+                               Foreground="{DynamicResource SystemBaseMediumColor}" Margin="0,0,0,15"/>
+                    
+                    <Grid ColumnDefinitions="*, Auto">
+                        <TextBlock Grid.Column="0" Text="{DynamicResource DarkThemeLabel}" FontSize="16" 
+                                   Foreground="{DynamicResource SystemBaseHighColor}" VerticalAlignment="Center"/>
+                        
+                        <ToggleSwitch Grid.Column="1" IsChecked="{Binding IsDarkTheme}" 
+                                      OnContent="{DynamicResource OnText}" OffContent="{DynamicResource OffText}"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Border Classes="Card">
+                <StackPanel>
+                    <TextBlock Text="{DynamicResource LocalizationLabel}" FontWeight="SemiBold" 
+                               Foreground="{DynamicResource SystemBaseMediumColor}" Margin="0,0,0,15"/>
+                    
+                    <Grid ColumnDefinitions="*, Auto">
+                        <TextBlock Grid.Column="0" Text="{DynamicResource LanguageLabel}" FontSize="16" 
+                                   Foreground="{DynamicResource SystemBaseHighColor}" VerticalAlignment="Center"/>
+                        
+                        <ComboBox Grid.Column="1" Width="150" 
+                                  ItemsSource="{Binding Languages}" 
+                                  SelectedItem="{Binding SelectedLanguage}" />
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </Grid>
 </UserControl>
