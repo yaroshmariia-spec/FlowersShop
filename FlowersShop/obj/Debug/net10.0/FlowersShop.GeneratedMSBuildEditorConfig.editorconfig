@@ -38,7 +38,13 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [/Users/gordinskij/RiderProjects/FlowersShop/FlowersShop/Views/DashboardView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/Users/gordinskij/RiderProjects/FlowersShop/FlowersShop/Views/LoginView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/Users/gordinskij/RiderProjects/FlowersShop/FlowersShop/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/gordinskij/RiderProjects/FlowersShop/FlowersShop/Views/RegisterView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/Users/gordinskij/RiderProjects/FlowersShop/FlowersShop/Views/SettingsView.axaml]

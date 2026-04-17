@@ -1,14 +1,28 @@
 using System;
+using CommunityToolkit.Mvvm.ComponentModel;
+using FlowersShop.Services;
 
 namespace FlowersShop.ViewModels;
 
-public class DashboardViewModel : ViewModelBase
+public partial class DashboardViewModel : ViewModelBase
 {
-    public string WelcomeMessage { get; set; } = "Вітаємо в системі управління Квітковим магазином!";
+    [ObservableProperty]
+    private string _currentDate = DateTime.Now.ToString("dd MMMM yyyy");
+    
+    [ObservableProperty]
+    private int _totalFlowers;
+    
+    [ObservableProperty]
+    private int _activeOrders;
+
+    public DashboardViewModel()
+    {
+        var fileService = new FileService("flowers_data.json");
         
-    public string CurrentDate { get; set; } = DateTime.Now.ToString("dd MMMM yyyy");
+        var flowers = fileService.LoadData();
         
-    public int TotalFlowers { get; set; } = 42; 
+        TotalFlowers = flowers.Count;
         
-    public int ActiveOrders { get; set; } = 7;
+        ActiveOrders = 5; 
+    }
 }

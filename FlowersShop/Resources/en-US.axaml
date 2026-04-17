@@ -1,6 +1,7 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    
     <system:String x:Key="SettingsTitle">Settings</system:String>
     <system:String x:Key="ThemeLabel">App Appearance</system:String>
     <system:String x:Key="DarkThemeLabel">Dark Theme</system:String>
@@ -8,4 +9,24 @@
     <system:String x:Key="LanguageLabel">Language</system:String>
     <system:String x:Key="OnText">On</system:String>
     <system:String x:Key="OffText">Off</system:String>
+    <system:String x:Key="Welcome">Welcome to the Flower Shop!!!</system:String>
+    <system:String x:Key="MenuMain">Main</system:String>
+    <system:String x:Key="MenuCatalog">Catalog of goods</system:String>
+    <system:String x:Key="MenuSetting">Settings</system:String>
+    <system:String x:Key="CatalogSearch">🔍 Search by name...</system:String>
+    <system:String x:Key="CatalogAddProduct">+ Add product</system:String>
+    <system:String x:Key="CatalogDelete">Delete selected</system:String>
+    <system:String x:Key="CatalogCard">Product card</system:String>
+    <system:String x:Key="CatalogName">Name::</system:String>
+    <system:String x:Key="CatalogCategory">Category::</system:String>
+    <system:String x:Key="CatalogPrice">Price (UAH)::</system:String>
+    <system:String x:Key="CatalogRemaining">Remainder in stock::</system:String>
+    <system:String x:Key="CatalogSave">Save:</system:String>
+    <system:String x:Key="CatalogCancel">Cancel:</system:String>
+    <system:String x:Key="DashBoardTotalProducts">Total products in the catalog:</system:String>
+    <system:String x:Key="DashBoardOrder">New orders:</system:String>
+    <system:String x:Key="SettingManagement">Account management:</system:String>
+    <system:String x:Key="LogOut">Вийти з акаунта:</system:String>
+    <system:String x:Key="Version">Program version: 1.0.0</system:String>
+    
 </ResourceDictionary>

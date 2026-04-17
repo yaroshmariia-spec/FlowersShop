@@ -8,24 +8,27 @@
         x:DataType="vm:MainWindowViewModel"
         Title="FlowersShop">
 
-    <Grid ColumnDefinitions="200, *">
+    <Grid ColumnDefinitions="Auto, *">
         
-        <Border Grid.Column="0" Background="{DynamicResource SystemListLowColor}" 
-                BorderBrush="{DynamicResource BrandLightPinkBrush}" BorderThickness="0,0,1,0">
+        <Border Grid.Column="0" Width="250" 
+                IsVisible="{Binding IsLoggedIn}" 
+                Background="{DynamicResource SystemListLowColor}" 
+                BorderBrush="{DynamicResource BrandLightPinkBrush}" 
+                BorderThickness="0,0,1,0">
             <StackPanel Spacing="15" Margin="15, 30">
-                <TextBlock Text="Квітковий Магазин" FontWeight="Bold" FontSize="18" Foreground="{DynamicResource BrandPinkBrush}" Margin="5,0,0,20"/>
+                <TextBlock Text="FlowersShop" FontWeight="Bold" FontSize="18" Foreground="{DynamicResource BrandPinkBrush}" Margin="5,0,0,20"/>
                 
-                <Button Content="Головна" Command="{Binding NavigateTo}" CommandParameter="Dashboard" 
+                <Button Content="{DynamicResource MenuMain}" Command="{Binding NavigateTo}" CommandParameter="Dashboard" 
                         HorizontalAlignment="Stretch" Background="Transparent" Foreground="{DynamicResource SystemBaseHighColor}" FontSize="16"/>
                 
-                <Button Content="Каталог товарів" Command="{Binding NavigateTo}" CommandParameter="Catalog" 
+                <Button Content="{DynamicResource MenuCatalog}" Command="{Binding NavigateTo}" CommandParameter="Catalog" 
                         HorizontalAlignment="Stretch" Background="Transparent" Foreground="{DynamicResource SystemBaseHighColor}" FontSize="16"/>
                 
-                <Button Content="Налаштування" Command="{Binding NavigateTo}" CommandParameter="Settings" 
+                <Button Content="{DynamicResource MenuSetting}" Command="{Binding NavigateTo}" CommandParameter="Settings" 
                         HorizontalAlignment="Stretch" Background="Transparent" Foreground="{DynamicResource SystemBaseHighColor}" FontSize="16"/>
             </StackPanel>
         </Border>
-
+        
         <TransitioningContentControl Grid.Column="1" Content="{Binding CurrentView}" />
         
     </Grid>

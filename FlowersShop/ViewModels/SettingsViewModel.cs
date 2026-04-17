@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Avalonia;
 using Avalonia.Markup.Xaml.Styling;
 using Avalonia.Styling;
+using System.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 using FlowersShop.ViewModels;
 
@@ -23,6 +24,20 @@ namespace FlowersShop.ViewModels
             if (Application.Current != null)
             {
                 IsDarkTheme = Application.Current.RequestedThemeVariant == ThemeVariant.Dark;
+                
+                var currentDict = Application.Current.Resources.MergedDictionaries.FirstOrDefault() as ResourceInclude;
+                
+                if (currentDict != null && currentDict.Source != null)
+                {
+                    if (currentDict.Source.ToString().Contains("en-US"))
+                    {
+                        _selectedLanguage = "English"; 
+                    }
+                    else
+                    {
+                        _selectedLanguage = "Українська";
+                    }
+                }
             }
         }
 

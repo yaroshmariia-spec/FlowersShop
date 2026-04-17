@@ -1,21 +1,51 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using FlowersShop.ViewModels;
 
 namespace FlowersShop.ViewModels 
 {
-    public class MainWindowViewModel : ViewModelBase 
+    public partial class MainWindowViewModel : ViewModelBase 
     {
-        private object _currentView;
-
-        public object CurrentView
-        {
-            get => _currentView;
-            set => SetProperty(ref _currentView, value); 
-        }
+        [ObservableProperty] private object _currentView;
+        
+        [ObservableProperty] 
+        [NotifyPropertyChangedFor(nameof(IsAdmin))]
+        private string _userRole = "User"; 
+        
+        public bool IsAdmin => UserRole == "Admin";
+        
+        [ObservableProperty] 
+        private bool _isLoggedIn;
 
         public MainWindowViewModel()
         {
-            CurrentView = new DashboardViewModel();
+            ShowLogin();
+        }
+        public void CompleteLogin(string role)
+        {
+            UserRole = role;
+            IsLoggedIn = true;
+            NavigateTo("Dashboard");
+        }
+        [RelayCommand]
+        public void ShowRegistration()
+        {
+            IsLoggedIn = false;
+            var registerVM = new RegisterViewModel();
+            CurrentView = registerVM;
+        }
+        [RelayCommand]
+        public void ShowLogin()
+        {
+            IsLoggedIn = false;
+            var loginVM = new LoginViewModel();
+            CurrentView = loginVM;
+        }
+        [RelayCommand]
+        public void Logout()
+        {
+            IsLoggedIn = false;
+            ShowLogin();
         }
 
         public void NavigateTo(string viewName)

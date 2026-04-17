@@ -44,6 +44,20 @@
                     </Grid>
                 </StackPanel>
             </Border>
+            <Border Classes="Card">
+                <StackPanel Spacing="15">
+                    <TextBlock Text="{DynamicResource SettingManagement}" FontWeight="SemiBold" 
+                               Foreground="{DynamicResource SystemBaseMediumColor}"/>
+                    
+                    <Button Classes="Secondary" Content="{DynamicResource LogOut}" 
+                            HorizontalAlignment="Stretch"
+                            Background="#FF4B4B" Foreground="White"
+                            Command="{Binding $parent[Window].((vm:MainWindowViewModel)DataContext).LogoutCommand}"/>
+                    
+                    <TextBlock Text="{DynamicResource Version}" FontSize="10" 
+                               Foreground="Gray" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
 
         </StackPanel>
     </Grid>
