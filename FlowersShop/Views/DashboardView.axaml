@@ -17,11 +17,20 @@
         </Border>
         
         <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="20">
-            
-            <Border Classes="Card" Width="250">
-                 <StackPanel>
+            <Border Background="White" CornerRadius="10" Padding="20" Width="250" 
+                    BoxShadow="0 4 10 0 #20000000">
+                <StackPanel>
                     <TextBlock Text="{DynamicResource DashBoardTotalProducts}" FontSize="14" Foreground="Gray" Margin="0,0,0,10"/>
-                    <TextBlock Text="{Binding TotalFlowers}" FontSize="42" FontWeight="Black" Foreground="#FF69B4"/>
+                    <TextBlock Text="{Binding TotalFlowers}" FontSize="42" FontWeight="Black" Foreground="#87CEFA"/>
+                    <Button Content="{DynamicResource DashBoardGoTo}" 
+                            Classes="Primary" 
+                            Background="White" 
+                            Foreground="{DynamicResource BrandPinkBrush}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" 
+                            Padding="20,10"
+                            Command="{Binding $parent[Window].((vm:MainWindowViewModel)DataContext).NavigateToCommand}"
+                            CommandParameter="Catalog"/>
                 </StackPanel>
             </Border>
             

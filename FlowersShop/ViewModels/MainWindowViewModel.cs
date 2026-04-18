@@ -13,7 +13,7 @@ namespace FlowersShop.ViewModels
         private string _userRole = "User"; 
         
         public bool IsAdmin => UserRole == "Admin";
-        
+
         [ObservableProperty] 
         private bool _isLoggedIn;
 
@@ -47,7 +47,7 @@ namespace FlowersShop.ViewModels
             IsLoggedIn = false;
             ShowLogin();
         }
-
+        [RelayCommand]
         public void NavigateTo(string viewName)
         {
             switch (viewName)
@@ -57,6 +57,15 @@ namespace FlowersShop.ViewModels
                     break;
                 case "Catalog":
                     CurrentView = new CatalogViewModel();
+                    break;
+                case "Orders":
+                    CurrentView = new OrdersViewModel();
+                    break;
+                case "Storefront":
+                    CurrentView = new StorefrontViewModel();
+                    break;
+                case "Cart":
+                    CurrentView = new CartViewModel();
                     break;
                 case "Settings":
                     CurrentView = new SettingsViewModel();
